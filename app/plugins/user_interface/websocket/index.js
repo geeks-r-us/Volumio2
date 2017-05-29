@@ -1747,15 +1747,36 @@ function InterfaceWebUI(context) {
 				if (check != undefined) {
 					check.then(function (data) {
 						selfConnWebSocket.emit('checkPassword', data);
-					});
+					});W
 				}
 
 
 			});
 
+			connWebSocket.on('getBluetoothDevices', function () {
+				var selfConnWebSocket = this;
+
+				var returnedData = self.commandRouter.executeOnPlugin('audio_interface', 'bluetooth_controller', 'getBluetoothDevices', '');
+
+				if (returnedData != undefined) {
+					returnedData.then(function (data) {
+						selfConnWebSocket.emit('pushBluetoothDevices', data);
+					});
+				}
+				else console.log("Error on returning bluetooth devices");
 
 
+			});
 
+			connWebSocket.on('connectBluetoothDevice', function(mac){
+				var selfConnWebSocket = this;
+				var data = self.commandRouter.executeOnPlugin('audio_interface', 'bluetooth_controller', 'connectDevice', mac);
+			});
+
+			connWebSocket.on('disconnectBluetoothDevice', function(mac){
+				var selfConnWebSocket = this;
+				var data = self.commandRouter.executeOnPlugin('audio_interface', 'bluetooth_controller', 'disconnectDevice', mac);
+			});
 
 		}
 		catch (ex) {

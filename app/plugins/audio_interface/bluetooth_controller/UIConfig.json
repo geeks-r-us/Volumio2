@@ -1,0 +1,30 @@
+{
+    "page": {
+        "label": "TRANSLATE.BLUETOOTH.BLUETOOTH_SETTINGS"
+    },
+    "sections": [
+                 {
+                 "id": "port",
+                 "element": "section",
+                 "label": "TRANSLATE.BLUETOOTH.DISCOVERABLE",
+                 "icon": "fa-bluetooth",
+                 "onSave": {"type":"controller", "endpoint":"audio_interface/bluetooth_controller", "method":"saveOptions"},
+                 "saveButton": {
+                 "label": "TRANSLATE.COMMON.SAVE",
+                 "data": [
+                          "discoverable_setting"
+                          ]
+                 },
+                 "content": [
+                             {
+                             "id": "discoverable_setting",
+                             "element": "switch",
+                             "label": "TRANSLATE.BLUETOOTH.DISCOVERABLE",
+                             "doc": "TRANSLATE.BLUETOOTH.DISCOVERABLE_DOC",
+                             "value": false
+                             }
+                             ]
+                 },
+                 {"coreSection":"bluetooth"}
+                ]
+}

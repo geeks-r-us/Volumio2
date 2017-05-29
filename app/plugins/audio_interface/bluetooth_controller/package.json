@@ -1,0 +1,17 @@
+{
+  "name": "bluetooth_controller",
+  "version": "0.1.0",
+  "description": "Manage Bluetooth connections",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "geeks-r-us",
+  "license": "",
+  "volumio_info": {
+    "prettyName": "Bluetooth Manager",
+    "icon": "fa-bluetooth",
+    "plugin_type": "audio_interface",
+    "boot_priority": 1
+  }
+}

@@ -60,6 +60,12 @@ audio_output {
     format          "44100:16:2"
 }
 
+audio_output {
+    type            "alsa"
+    name            "bluealsa"
+    device          "bluealsa"
+    mixer_type      "software"
+}
 
 #replaygain			"album"
 #replaygain_preamp		"0"

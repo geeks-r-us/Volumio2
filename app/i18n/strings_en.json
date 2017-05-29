@@ -181,6 +181,7 @@
   "MAIN_MENU":{
     "MY_MUSIC":"My Music",
     "PLAYBACK_OPTIONS":"Playback Options",
+    "BLUETOOTH_OPTIONS":"Bluetooth Options",
     "APPEARANCE":"Appearance",
     "NETWORK":"Network",
     "SYSTEM":"System",
@@ -244,5 +245,10 @@
     "UPDATING_PLUGIN":"Updating Plugin",
     "DOWNLOADING_FROM":"Downloading Plugin from ",
     "DOWNLOADING":"Downloading Plugin"
+  },
+  "BLUETOOTH":{
+    "BLUETOOTH_SETTINGS":"Bluetooth Settings",
+    "DISCOVERABLE":"Discoverable",
+    "DISCOVERABLE_DOC":"Control the visibility of Volumio to other BT devices"
   }
 }
